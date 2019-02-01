@@ -2,7 +2,6 @@
 // Immediately invoked function expression.
 // executes the function when its created and stores the correct values of i
 var arr = [];
-var funcs = []
 
 for (var i = 0; i< 3; i++) {
      arr[i] = (function(index) {

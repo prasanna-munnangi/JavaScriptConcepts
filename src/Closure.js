@@ -9,4 +9,4 @@ var outerFunc = function(a, b) {
     innerFunc();
 }
 
-outerFunc('Hello', 'World');
+outerFunc('Hello', 'World'); // prints Hello World !
