@@ -1,0 +1,31 @@
+<!-- // Event delegation allows you to avoid adding event listeners to specific nodes;
+// insted, the event listener is added to one parent. That event listener analyzes bubbled
+// events to find a match on child elements. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test concepts</title>
+  </head>
+  <body>
+    <ul id="parentUl">
+      <li id="item-1">Item 1</li>
+      <li id="item-2">Item 2</li>
+      <li id="item-3">Item 3</li>
+      <li id="item-4">Item 4</li>
+      <li id="item-5">Item 5</li>
+    </ul>
+  </body>
+</html>
+
+<script type="text/javascript">
+    document.getElementById('parentUl').addEventListener('click', function(e) {
+      // e.target is the clicked element
+
+      if (e.target) {
+        console.log("List Item", e.target.id.replace("item-", ""), "was clicked");
+      }
+
+
+    });
+</script>

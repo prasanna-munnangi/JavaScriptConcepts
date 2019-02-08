@@ -10,3 +10,17 @@ var outerFunc = function(a, b) {
 }
 
 outerFunc('Hello', 'World'); // prints Hello World !
+
+
+
+// in closure the innerFunction has access to
+// outer functions parameter even after the execution of the outerFunction is finished
+var outerFunction = function (multiplier) {
+  var innerFunction = function(operand) {
+    return multiplier*operand;
+  }
+  return innerFunction;
+}
+
+var operation = outerFunction(10);
+console.log(operation(10)); // prints 100
