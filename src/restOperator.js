@@ -3,7 +3,7 @@
 
 const array = [1, 20, 30, 39, 13];
 
-console.log(array.every(val => val < 40));
+console.log(array.every(val => val < 40)); // true
 
 // rest operators, converts the args into array
 // rest operators aren't just for parameters. It works for pulling the remaining
@@ -15,12 +15,12 @@ function getArguments(...args) {
 }
 
 console.log(getArguments('abcd', 'efgh'), 'result after using rest operator');
+// ["abcd", "efgh"] result after using rest operator
 
 // shift functionality using rest operator
 
-
 const queue = ['stop', 'collaborate', 'listen'];
 const [first, ...remaining] = queue;
-console.log(first);
-console.log(...remaining);
-console.log(queue);
+console.log(first); // stop
+console.log(...remaining); // collaborate listen
+console.log(queue); // ["stop", "collaborate", "listen"]
